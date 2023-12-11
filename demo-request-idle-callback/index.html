@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./polyfill.js" async></script>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>
+        Demonstration of using cooperatively scheduled background tasks using
+        the
+        <code>requestIdleCallback()</code> method.
+      </h1>
+      <div class="control">
+        <input type="checkbox" id="enable-responsiveness" /> Enable
+        requestIdleCallback to make user input responsive
+      </div>
+      <div class="grid">
+        <div class="playground">
+          <div class="boxes">
+            <li class="box"></li>
+          </div>
+          <button id="addNew">+</button>
+        </div>
+        <div class="long-task">
+          <div class="progress-bar-container">
+            <span class="progressValue" id="progressValue"></span>
+            <span class="progress" id="progress"></span>
+          </div>
+          <div class="actions">
+            <button id="startLongTask">Start long task</button>
+            <button id="stop">Stop</button>
+            <button id="resume">Resume</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

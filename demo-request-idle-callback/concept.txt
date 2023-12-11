@@ -1,0 +1,9 @@
+# requestidleCallback
+The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses.
+
+## Getting the most out of idle callbacks
+- Use idle callbacks for tasks which don't have high priority
+- Idle callbacks should do their best not to overrun the time allotted
+- Avoid making changes to the DOM within your idle callback.
+- Avoid tasks whose run time can't be predicted
+- Use timeouts when you need to, but only when you need to
